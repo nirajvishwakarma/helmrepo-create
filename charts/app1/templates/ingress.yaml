@@ -1,0 +1,13 @@
+apiVersion: extensions/v1beta1
+kind: Ingress
+metadata:
+  name: sample-flux-example
+spec:
+  rules:
+  - host: sample-flux.example.com 
+    http:
+      paths:
+      - path: /
+        backend:
+          serviceName: sample-flux-example
+          servicePort: 80
